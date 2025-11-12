@@ -64,7 +64,7 @@ void Book::increaseAvailable()
     }
 }
 
-// Getters
+// getters
 std::string Book::getTitle() const { return m_title; }
 std::string Book::getAuthor() const { return m_author; }
 int Book::getBookId() const { return m_bookId; }
