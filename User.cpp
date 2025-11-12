@@ -69,4 +69,5 @@ void User::payFine(double amount)
 
 // Getters
 int User::getUserId() const { return m_userId; }
+std::string User::getName() const {return m_name;}
 double User::getFineAmount() const { return m_fineAmount; }

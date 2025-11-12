@@ -31,6 +31,7 @@ public:
 
     // getters
     int getUserId() const;
+    std::string getName() const;
     double getFineAmount() const;
 
 private:
