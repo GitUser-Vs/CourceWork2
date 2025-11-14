@@ -1,46 +1,34 @@
 #include <string>
 #include <iostream>
 
-class Book;
+using String = std::string;
 
 class User
 {
-public:
-    // default constructor
-    User();
-
-    // constructor with parameters
-    User(int userId, std::string name, std::string address, std::string phone, std::string email);
-
-    // destructor
-    ~User();
-
-    // Публичные методы
-
-    // display user information
-    void displayUserInfo() const;
-
-    // borrow book
-    void borrowBook(Book* book);
-
-    // add fine
-    void addFine(double amount);
-
-    // pay fine
-    void payFine(double amount);
-
-    // getters
-    int getUserId() const;
-    std::string getName() const;
-    double getFineAmount() const;
 
 private:
-    // private fields
-    int m_userId;
-    std::string m_name;
-    std::string m_address;
-    std::string m_phone;
-    std::string m_email;
+    // private variables
+    int m_UserID;
+    String m_name;
+    String m_email;
+    int m_borrowedCount;
+    int m_maxBorrowedCount;
 
-    double m_fineAmount;
+public:
+    // constructors and destructor
+    User();
+    User(int UserID, const String& name, const String& email, int maxBorrowedCount);
+    ~User();
+
+    // public methods
+    void displayInfo() const;
+    bool borrowBook();
+    bool returnBook();
+
+    // Getters
+    int getUserID() const;
+    String getName() const;
+    String getEmail() const;
+    int getBorrowedCount() const;
+    int getMaxBorrowedCount() const;
 };
